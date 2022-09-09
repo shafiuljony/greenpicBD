@@ -1,12 +1,10 @@
 import React from 'react'
-import HeroSection from '../components/HeroSection'
-import ProductList from '../components/ProductList'
+import HeroSection from '../components/HeroSection';
 
 export default function Home() {
   return (
     <>
     <HeroSection />
-    <ProductList />
     </>
   )
 }

@@ -8,13 +8,13 @@ const sliders = [
         name:'Jaitul Fol',
         desc: 'JAitun',
         img: oliveImg,
-    }
+    },
     {
         id: uuidv4(),
         name:'Jaitul Fol',
         desc: 'JAitun',
         img: puffedRiceImg,
-    }
+    },
     {
         id: uuidv4(),
         name:'Jaitul Fol',
