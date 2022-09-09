@@ -9,10 +9,12 @@ const GlobalStyles = createGlobalStyle`
   :root{
     --dark-bg: #262626;
     --gray-1: #BCB4B4;
+    --light-green: #c9e7d8;
     --deep-dark: #1E1E1E;
     --deep-green: #fcfcfc;
     --gray-2: #363636;
     --white : white;
+    --green3: #66A931;
     --black: black;
     --green: #28bd71;
   }

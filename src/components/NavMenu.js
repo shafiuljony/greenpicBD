@@ -1,6 +1,6 @@
 import React from 'react'
-import { Link } from "react-router-dom";
-import LogoImg from '../assets/logo.png';
+import { Link, NavLink } from "react-router-dom";
+import LogoImg from '../assets/images/logo.png';
 import { FiSearch, FiShoppingCart, FiUser } from 'react-icons/fi'
 import styled from 'styled-components';
 
@@ -10,11 +10,12 @@ const NavMenuStyles = styled.div`
   align-items: center;
   justify-content: space-between;
 	position: fixed;
+  z-index: 100;
 	top: 0;
 	left: 0;
 	width: 100%;
 	padding: 1rem 0;
-	background: var(--green);
+	background: var(--light-green);
   ul {
     margin: 0 auto;
     text-align: center;
@@ -23,7 +24,7 @@ const NavMenuStyles = styled.div`
       border-radius: 8px;
       transition: 0.3s ease background-color;
       &:hover {
-        background-color: var(--deep-green);
+        background-color: var(--green);
       }
     }
     a {
@@ -33,10 +34,11 @@ const NavMenuStyles = styled.div`
       font-size: 2rem;
       color: var(--black);
       outline: none;
+      text-transform: uppercase;
     }
   }
-  .header-right .search-bar{
-
+  .active{
+    color: var(--green3);
   }
   }
 
@@ -45,6 +47,7 @@ const NavMenuStyles = styled.div`
 export default function NavMenu() {  
   return (
     <NavMenuStyles>
+      <div className='mobile-menu-icon'></div>
       <nav>
         <div className='logo-site'>
           <Link to="/">
@@ -54,16 +57,16 @@ export default function NavMenu() {
         <div className='menu-bar'>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <NavLink to='/'>Home</NavLink>
             </li>
             <li>
-              <Link to="/about">About</Link>
+            <NavLink to='/about'>About</NavLink>
             </li>
             <li>
-              <Link to="/contact">Contact</Link>
+            <NavLink to='/product'>Product</NavLink>
             </li>
             <li>
-              <Link to="/product">Product</Link>
+            <NavLink to='/contact'>Contact</NavLink>
             </li>
           </ul>
         </div>
