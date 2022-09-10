@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, NavLink } from "react-router-dom";
-import LogoImg from '../assets/images/logo.png';
+import LogoImg from '../assets/images/logo128.png';
 import { FiSearch, FiShoppingCart, FiUser } from 'react-icons/fi'
 import styled from 'styled-components';
 
@@ -15,7 +15,13 @@ const NavMenuStyles = styled.div`
 	left: 0;
 	width: 100%;
 	padding: 1rem 0;
-	background: var(--light-green);
+	background: var(--gray-2);
+  .logo-site{
+    img{
+      height: 50px;
+      width: 100px;
+    }
+  }
   ul {
     margin: 0 auto;
     text-align: center;
@@ -32,7 +38,7 @@ const NavMenuStyles = styled.div`
       font-family: 'RobotoMono Regular', serif;
       padding: 1rem 2rem;
       font-size: 2rem;
-      color: var(--black);
+      color: var(--white);
       outline: none;
       text-transform: uppercase;
     }
