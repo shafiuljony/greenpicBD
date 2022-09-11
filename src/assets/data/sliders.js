@@ -6,19 +6,19 @@ const sliders = [
     {
         id: uuidv4(),
         name:'Jaitul Fol',
-        desc: 'JAitun',
+        desc: 'Reduce the risk of cancer,Relieves skin inflammation,Smooth blood flow,Controlling cholesterol,Prevent premature aging,Reduce the risk of diabetes.',
         img: oliveImg,
     },
     {
         id: uuidv4(),
         name:'Jaitul Fol',
-        desc: 'JAitun',
+        desc: 'Reduce the risk of cancer,Relieves skin inflammation,Smooth blood flow,Controlling cholesterol,Prevent premature aging,Reduce the risk of diabetes.',
         img: puffedRiceImg,
     },
     {
         id: uuidv4(),
         name:'Jaitul Fol',
-        desc: 'teaFlayerImg',
+        desc: 'Reduce the risk of cancer,Relieves skin inflammation,Smooth blood flow,Controlling cholesterol,Prevent premature aging,Reduce the risk of diabetes.',
         img: teaFlayerImg,
     }
 ];

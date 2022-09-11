@@ -8,6 +8,17 @@ import 'swiper/css/bundle';
 SwiperCore.use([Navigation]);
 
 const HeroSectionStyles = styled.div`
+.swiper-button-next,
+.swiper-button-prev {
+	right: 10px;
+	background-color: var(--gray-2);
+	border-radius: 8px;
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	color: var(--gray-1);
+	z-index: 10;
+}
 `
 export default function HeroSection() {
   return (
@@ -21,7 +32,11 @@ export default function HeroSection() {
             if(index >= 3) return '';
             return(
               <SwiperSlide key={slider.id}>
-                <SliderItem />
+                <SliderItem 
+                  title={slider.name}
+                  img={slider.img}
+                  desc={slider.desc}
+                />
               </SwiperSlide>
             );
           })}
