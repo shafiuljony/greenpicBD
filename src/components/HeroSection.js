@@ -1,48 +1,48 @@
-import React from 'react'
-import styled from 'styled-components';
-import SwiperCore,{ Navigation } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import React, {useState} from 'react'
+import '../components/sliders/Slider.css';
 import sliders from '../assets/data/sliders';
-import SliderItem from './SliderItem';
-import 'swiper/css/bundle';
-SwiperCore.use([Navigation]);
+import SliderItem from './sliders/SliderItem';
+import BtnSlider from './sliders/SliderBtn';
 
-const HeroSectionStyles = styled.div`
-.swiper-button-next,
-.swiper-button-prev {
-	right: 10px;
-	background-color: var(--gray-2);
-	border-radius: 8px;
-	position: absolute;
-	height: 50px;
-	width: 50px;
-	color: var(--gray-1);
-	z-index: 10;
-}
-`
-export default function HeroSection() {
-  return (
-    <HeroSectionStyles> 
-      <div className='container'>
-        <div className='slider-img'>
-         <Swiper 
-         slidesPerView={1}
-         navigation >
-          {sliders.map((slider, index) => {
-            if(index >= 3) return '';
-            return(
-              <SwiperSlide key={slider.id}>
-                <SliderItem 
-                  title={slider.name}
-                  img={slider.img}
-                  desc={slider.desc}
-                />
-              </SwiperSlide>
-            );
-          })}
-         </Swiper>
+export default function Slider() {
+
+    const [slideIndex, setSlideIndex] = useState(1)
+
+    const nextSlide = () => {
+        if(slideIndex !== sliders.length){
+            setSlideIndex(slideIndex + 1)
+        } 
+        else if (slideIndex === sliders.length){
+            setSlideIndex(1)
+        }
+    }
+
+    const prevSlide = () => {
+        if(slideIndex !== 1){
+            setSlideIndex(slideIndex - 1)
+        }
+        else if (slideIndex === 1){
+            setSlideIndex(sliders.length)
+        }
+    }
+    return (
+        <div className="container-slider">
+            {sliders.map((slider, index) => {
+                return (
+                    <div
+                    key={slider.id}
+                    className={slideIndex === index + 1 ? "slide active-anim" : "slide"}
+                    >
+                        <SliderItem 
+                          img={slider.img} 
+                          title={slider.name}
+                          desc={slider.desc}
+                        />
+                    </div>
+                )
+            })}
+            <BtnSlider moveSlide={nextSlide} direction={"next"} />
+            <BtnSlider moveSlide={prevSlide} direction={"prev"}/>
         </div>
-      </div>
-    </HeroSectionStyles>
-  )
+    )
 }

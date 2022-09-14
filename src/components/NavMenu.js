@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, NavLink } from "react-router-dom";
 import LogoImg from '../assets/images/logo128.png';
-import { FiSearch, FiShoppingCart, FiUser } from 'react-icons/fi'
+import { FiSearch, FiShoppingCart, FiUser } from 'react-icons/fi';
 import styled from 'styled-components';
 
 const NavMenuStyles = styled.div`
@@ -47,8 +47,8 @@ const NavMenuStyles = styled.div`
     color: var(--green3);
   }
   }
-
 `
+
 
 export default function NavMenu() {  
   return (
