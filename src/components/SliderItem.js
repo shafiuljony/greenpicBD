@@ -1,15 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import sliderImg from '../../assets/images/olive-fruit.jpg';
-import Button from '../Button';
+import sliderImg from '../assets/images/olive-fruit.jpg';
 
 const SliderItemStyles = styled.div`
     .sliderItem{
-        padding-top: 7rem;
+        padding-top: 9rem;
     }
     .sliderItem_info{
-        // background-color: #363636;
-        // margin: 30rem;
         text-align: center;
         margin-top: -10rem;
         position: relative;
@@ -35,13 +32,6 @@ export default function SliderItem({
         <div className='sliderItem'>
             <div className='sliderItem_img'>
                 <img src={img} alt='slider img' />
-            </div>
-            <div className='sliderItem_info'>
-                {/* <div>
-                    <h2 className='sliderItem_name'>{name}</h2>
-                </div>
-                <p className='sliderItem_desc'>{desc}</p> */}
-                <Button btnLink='/products' btnText='Explore our product'/>
             </div>
         </div>
     </SliderItemStyles>

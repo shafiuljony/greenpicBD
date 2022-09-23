@@ -11,15 +11,13 @@ const NavMenuStyles = styled.div`
   justify-content: space-between;
 	position: fixed;
   z-index: 100;
-	top: 0;
-	left: 0;
 	width: 100%;
 	padding: 1rem 0;
 	background: var(--gray-2);
   .logo-site{
     img{
-      height: 50px;
-      width: 100px;
+      height: 7rem;
+      width: 16rem;
     }
   }
   ul {
@@ -47,6 +45,12 @@ const NavMenuStyles = styled.div`
     color: var(--green3);
   }
   }
+  .navbar{
+    margin-right: auto;
+  margin-left: auto;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  }
 `
 
 
@@ -54,7 +58,7 @@ export default function NavMenu() {
   return (
     <NavMenuStyles>
       <div className='mobile-menu-icon'></div>
-      <nav>
+      <nav className='navbar'>
         <div className='logo-site'>
           <Link to="/">
             <img src={LogoImg} alt="logo" />

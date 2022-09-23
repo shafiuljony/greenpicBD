@@ -1,6 +1,9 @@
 import React from "react";
-import "./Slider.css";
+
+
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
+
+
 export default function BtnSlider({ direction, moveSlide }) {
   console.log(direction, moveSlide);
   return (
